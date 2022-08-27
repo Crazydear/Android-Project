@@ -1,0 +1,3 @@
+rootProject.name = "sqliteviewer"
+include ':app'
+include ':tableview'
