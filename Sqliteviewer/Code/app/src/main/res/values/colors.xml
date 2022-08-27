@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <color name="cell_background_color">#ffffff</color>
+    <color name="cell_text_color">#1f1f1f</color>
+    <color name="header_line_color">@android:color/holo_red_light</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="table_view_default_text_color">#FF000000</color>
+    <color name="table_view_default_separator_color">#E7E7E7</color>
+    <color name="table_view_default_unselected_background_color">#ffffff</color>
+    <color name="table_view_default_selected_background_color">#fada65</color>
+    <color name="table_view_default_shadow_background_color">#f2f2f2</color>
+</resources>

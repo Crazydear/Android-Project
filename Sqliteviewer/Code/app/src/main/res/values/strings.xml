@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">SqliteViewer</string>
+
+    <string name="settings">设置</string>
+
+    <string name="no_database_path_found">数据文件不存在</string>
+    <string name="not_database">不是SQLite数据库文件</string>
+    <string name="menu_table_data_bottom_bar_previous_title">上一页</string>
+    <string name="menu_tabledata_export_csv_title">导   出</string>
+    <string name="menu_table_data_bottom_bar_next_title">下一页</string>
+    <string name="table_empty">表中没有数据</string>
+    <string name="export_progress_dialog_title">导出...</string>
+    <string name="export_progress_dialog_message">数据正在导出，请稍等</string>
+    <string name="toast_message_failed_export_message">写入文件失败，请重试</string>
+    <string name="toast_message_export_success">数据导出成功</string>
+    <string name="title_activity_settings">设置</string>
+
+    <string name="preference_settings_table_row_count_key" translatable="false">table_row_count</string>
+
+    <string name="preference_settings_table_row_count_title">每页行数</string>
+    <string name="preference_settings_table_row_count_summary">设置每页显示的行数</string>
+    <string name="prefs_category_table_view_settings_summary">设置表格视图</string>
+    <string name="prefs_category_table_view_settings_title">表格视图设置</string>
+    <string name="prefs_category_export_settings_title">导出设置</string>
+    <string name="prefs_category_export_settings_summary">导出CSV设置</string>
+    <string name="prefs_max_export_query_count_title">最大查询数量</string>
+    <string name="prefs_max_export_query_count_summary">设置每次查询返回的行数.\n注意: 数值过大会导致内存溢出错误</string>
+    <string name="preference_export_charset_key" translatable="false">export_file_charset_key</string>
+    <string name="preference_export_charset_title">导出文件编码</string>
+    <string name="preference_export_charset_summary">导出文件默认编码: UTF-8</string>
+    <string name="preference_export_charset_dialog_title">文件编码</string>
+
+
+    <string name="table_cell_popup_menu_copy">Copy</string>
+    <string name="table_cell_popup_menu_share">Share</string>
+    <string name="table_cell_popup_menu_toast_message">Data copied to clipboard</string>
+    <string name="toast_message_database_not_open">Error! Database not open. Please try again</string>
+    <string name="toast_message_table_empty">Table is empty</string>
+
+    <string name="export_edittext_empty_error_message">FileName cannot be empty</string>
+    <string name="export_fileName_dialog_title">Export CSV</string>
+    <string name="export_fileName_dialog_edittext_hint">File Name</string>
+    <string name="floating_action_button_custom_query_hint">Custom Query</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_support">Get help</string>
+    <string name="preference_max_export_query_count_key" translatable="false">max_export_query_count</string>
+
+
+
+
+
+    <string name="toast_message_intent_filter_no_uri_data">No uri is passed! Cannot open database</string>
+    <string name="countly_basic_crash_reporting_key">basic_crash_reporting_key</string>
+    <string name="countly_basic_crash_reporting_summary">Enable basic crash reporting. No crash data outside the app is collected</string>
+    <string name="countly_basic_crash_reporting_title">Enable basic crash reporting</string>
+    <string name="countly_update_notification_key">update_notification_key</string>
+    <string name="countly_update_notification_title">Show update notification</string>
+    <string name="countly_update_notification_summary">Show notification when there is an update to the app</string>
+    <string name="countly_anonymous_usage_stats_key">anonymous_usage_stats_key</string>
+    <string name="countly_anonymous_usage_stats_title">Anonymous usage statistics</string>
+    <string name="countly_anonymous_usage_stats_summary">Enable anonymous usage statistics. No personally identifiable information is collected</string>
+    <string name="alert_dialog_analytics_title">Allow anonymous analytics</string>
+    <string name="alert_dialog_analytics_message">Do you want to allow anonymous crash reporting and usage metrics now?\nRead the privacy policy to know more on what data are collected</string>
+    <string name="alert_dialog_analytics_positive_btn_text">Enable analytics</string>
+    <string name="alert_dialog_analytics_neutral_btn_text">Enable Crash reporting only</string>
+    <string name="alert_dialog_analytics_negative_btn_text">Disable everything</string>
+    <string name="prefs_category_analytics_settings_title">Analytics settings</string>
+    <string name="prefs_category_analytics_settings_summary">Manage analytics and crash reporting settings</string>
+
+</resources>

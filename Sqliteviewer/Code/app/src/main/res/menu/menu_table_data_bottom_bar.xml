@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_previous"
+        android:icon="@drawable/ic_previous_24dp"
+        android:title="@string/menu_table_data_bottom_bar_previous_title" />
+
+    <item
+        android:id="@+id/action_export_csv"
+        android:icon="@drawable/ic_import_export_24dp"
+        android:title="@string/menu_tabledata_export_csv_title" />
+
+    <item
+        android:id="@+id/action_next"
+        android:icon="@drawable/ic_next_24dp"
+        android:title="@string/menu_table_data_bottom_bar_next_title" />
+
+</menu>
