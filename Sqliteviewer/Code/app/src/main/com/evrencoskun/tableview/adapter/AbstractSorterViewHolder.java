@@ -26,52 +26,28 @@ package com.evrencoskun.tableview.adapter.recyclerview.holder;
 
 import android.view.View;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+
+import com.evrencoskun.tableview.sort.SortState;
 
 /**
- * Created by evrencoskun on 23/10/2017.
+ * Created by evrencoskun on 16.12.2017.
  */
 
-public abstract class AbstractViewHolder extends RecyclerView.ViewHolder {
-    public enum SelectionState {SELECTED, UNSELECTED, SHADOWED}
-
-    // Default value
+public class AbstractSorterViewHolder extends AbstractViewHolder {
     @NonNull
-    private SelectionState m_eState = SelectionState.UNSELECTED;
+    private SortState mSortState = SortState.UNSORTED;
 
-    public AbstractViewHolder(@NonNull View itemView) {
+    public AbstractSorterViewHolder(@NonNull View itemView) {
         super(itemView);
     }
 
-    public void setSelected(@NonNull SelectionState selectionState) {
-        m_eState = selectionState;
-
-        if (selectionState == SelectionState.SELECTED) {
-            itemView.setSelected(true);
-        } else if (selectionState == SelectionState.UNSELECTED) {
-            itemView.setSelected(false);
-        }
+    public void onSortingStatusChanged(@NonNull SortState pSortState) {
+        this.mSortState = pSortState;
     }
 
-    public boolean isSelected() {
-        return m_eState == SelectionState.SELECTED;
+    @NonNull
+    public SortState getSortState() {
+        return mSortState;
     }
-
-    public boolean isShadowed() {
-        return m_eState == SelectionState.SHADOWED;
-    }
-
-    public void setBackgroundColor(@ColorInt int p_nColor) {
-        itemView.setBackgroundColor(p_nColor);
-    }
-
-    public void onViewRecycled() {
-    }
-
-    public boolean onFailedToRecycleView() {
-        return false;
-    }
-
 }
