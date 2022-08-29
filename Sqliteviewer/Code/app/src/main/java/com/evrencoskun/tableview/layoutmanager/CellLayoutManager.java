@@ -379,8 +379,10 @@ public class CellLayoutManager extends LinearLayoutManager {
             if (lastCellRecyclerView != null) {
                 if (yPosition == lastVisiblePosition) {
                     return true;
-                } else return lastCellRecyclerView.isScrollOthers() && yPosition ==
-                        lastVisiblePosition - 1;
+                } else if (lastCellRecyclerView.isScrollOthers() && yPosition ==
+                        lastVisiblePosition - 1) {
+                    return true;
+                }
             }
         }
         return false;

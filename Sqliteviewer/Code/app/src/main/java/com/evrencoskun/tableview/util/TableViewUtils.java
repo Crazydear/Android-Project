@@ -40,7 +40,7 @@ public class TableViewUtils {
      */
     public static void setWidth(@NonNull View view, int width) {
         // Change width value from params
-        view.getLayoutParams().width = width;
+        ((RecyclerView.LayoutParams) view.getLayoutParams()).width = width;
 
         int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY);
         int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(view.getMeasuredHeight(), View

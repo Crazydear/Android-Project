@@ -31,8 +31,6 @@ import de.siegmar.fastcsv.writer.CsvWriter
 import java.io.File
 import java.io.IOException
 import java.nio.charset.Charset
-import java.util.*
-import kotlin.collections.ArrayList
 
 class TableDataActivity : AppCompatActivity(){
 
@@ -63,7 +61,7 @@ class TableDataActivity : AppCompatActivity(){
 
         if (intent != null && intent.hasExtra(Const.DBTableNameIntent))
             tableName = intent.getStringExtra(Const.DBTableNameIntent).toString()
-        dbName = File(db.get_dbPath()).name
+        dbName = File(db.get_dbPath()).getName()
 
         initToolbar()
         initBottomBar()
@@ -110,7 +108,7 @@ class TableDataActivity : AppCompatActivity(){
         if (shouldShowPageSelect()){
            refreshPageRecy()
         }else
-            item?.isVisible = false
+            item?.setVisible(false)
         refreshPageRecy()
         return true
     }
@@ -152,12 +150,15 @@ class TableDataActivity : AppCompatActivity(){
         setSupportActionBar(binding.toolbar)
         supportActionBar?.let {
             it.setDisplayHomeAsUpEnabled(true)
-            it.title = "${striExtension(dbName)}.$tableName"
+            it.setTitle("${striExtension(dbName)}.$tableName")
         }
     }
 
     private val onScrollListener: RecyclerView.OnScrollListener =
         object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+            }
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 if (dy > 0 && binding.bottomNavigationView.isShown) {
                     binding.bottomNavigationView.animate()
@@ -198,7 +199,7 @@ class TableDataActivity : AppCompatActivity(){
     }
 
     private fun formatFileName(fileName:String): String {
-        return if (fileName.lowercase(Locale.getDefault()).endsWith(".csv")) fileName else "$fileName.csv"
+        return if (fileName.toLowerCase().endsWith(".csv")) fileName else "$fileName.csv"
     }
 
     private fun exportToCSV(fileName: String){
@@ -231,7 +232,7 @@ class TableDataActivity : AppCompatActivity(){
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.action_export_csv ->{
-                        exportToCSV("今日数据.csv")
+                        exportToCSV("${striExtension(dbName)}.$tableName.csv")
                         "数据已导出".showToast(this)
                         return@OnNavigationItemSelectedListener true
                     }

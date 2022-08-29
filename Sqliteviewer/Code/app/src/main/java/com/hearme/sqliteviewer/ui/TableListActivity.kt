@@ -1,6 +1,7 @@
 package com.hearme.sqliteviewer.ui
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -56,7 +57,7 @@ class TableListActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.let {
             it.setDisplayHomeAsUpEnabled(true)
-            it.title = File(dbPath).name
+            it.setTitle(File(dbPath).name)
         }
     }
 
@@ -89,7 +90,7 @@ class TableListActivity : AppCompatActivity() {
     * 初始化数据
     * */
     private fun initData(){
-        if (intent !=null && intent.hasExtra(Const.DBPathIntent))
+        if (getIntent()!=null && intent.hasExtra(Const.DBPathIntent))
             dbPath = intent.getStringExtra(Const.DBPathIntent).toString()
         else{
             R.string.no_database_path_found.showToast(this)
@@ -105,6 +106,14 @@ class TableListActivity : AppCompatActivity() {
             setupRecyclerView()
         }else{
             R.string.not_database.showToast(this)
+        }
+    }
+
+    companion object{
+        fun actionStart(context: Context, dbPath: String) {
+            val intent = Intent(context, TableListActivity::class.java)
+            intent.putExtra(Const.DBPathIntent, dbPath)
+            context.startActivity(intent)
         }
     }
 

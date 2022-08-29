@@ -7,7 +7,7 @@ class FieldModel {
     var pk = 0
     var def: String? = null
 
-    constructor()
+    constructor() {}
     constructor(fieldName: String, fieldType: String, notNull: Int, pk: Int, def: String) {
         this.fieldName = fieldName
         this.fieldType = fieldType
